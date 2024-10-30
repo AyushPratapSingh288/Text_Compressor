@@ -51,10 +51,8 @@ const uploadOnCloudinary = async (localFilePath) =>{
       return null;
     }
  }
-
-
+ 
 const cppDir = path.join(__dirname, 'cpp');
-
 // Compress Endpoint
 app.post('/compress', async (req, res) => {
     try {
@@ -88,7 +86,6 @@ app.post('/compress', async (req, res) => {
         res.status(500).send('Internal server error.');
     }
 });
-
 // Decompress Endpoint
 app.post('/decompress', async (req, res) => {
     try {
@@ -116,8 +113,6 @@ app.post('/decompress', async (req, res) => {
         res.status(500).send('Internal server error.');
     }
 });
-
-
 
 app.get('/uploads/:fileName', (req, res) => {
     const fileName = req.params.fileName;

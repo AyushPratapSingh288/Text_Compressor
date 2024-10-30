@@ -41,7 +41,7 @@ const ActionButtons = ({ onCompress, onDecompress, downloadUrl }) => {
   };
   const reload=async()=>{
     setIsLoading(true);
-   await axios.get('https://text-compressor.onrender.com/reload').then ((res)=>{
+   await axios.get('https://hoffman-compression-for-text-or-img-mxk6.onrender.com/reload').then ((res)=>{
       const {success}= res.data;
 
    if (success) {

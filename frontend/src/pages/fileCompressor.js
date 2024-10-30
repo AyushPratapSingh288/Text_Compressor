@@ -34,11 +34,11 @@ const FileCompressor = () => {
     formData.append('file', selectedFile);
 
     setIsLoading(true);
-       await axios.post('https://text-compressor.onrender.com/compress', formData).then ((res)=>{
+       await axios.post('https://hoffman-compression-for-text-or-img-mxk6.onrender.com/compress', formData).then ((res)=>{
          const {success,downloadUrl}= res.data;
 
       if (success) {
-        setDownloadUrl(`https://text-compressor.onrender.com${downloadUrl}`);
+        setDownloadUrl(`https://hoffman-compression-for-text-or-img-mxk6.onrender.com${downloadUrl}`);
         alert('Compressed Successfully. Kindly click the download button for download');
       } else {
         alert('Compression failed.');
@@ -56,7 +56,7 @@ const FileCompressor = () => {
     const formData = new FormData();
     formData.append('file', selectedFile);
     setIsLoading(true);
-    await axios.post('https://text-compressor.onrender.com/decompress', formData).then((res)=>{
+    await axios.post('https://hoffman-compression-for-text-or-img-mxk6.onrender.com/decompress', formData).then((res)=>{
       const {success,downloadUrl}= res.data;
     
 
