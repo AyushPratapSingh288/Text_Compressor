@@ -13,7 +13,7 @@ app.use(fileUpload());
 
 // CORS configuration
 const corsOptions = {
-    origin: 'https://text-compressor.vercel.app/',
+    origin: 'https://text-compressor.vercel.app',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type']
 };
@@ -51,7 +51,7 @@ const uploadOnCloudinary = async (localFilePath) =>{
       return null;
     }
  }
- 
+
 const cppDir = path.join(__dirname, 'cpp');
 // Compress Endpoint
 app.post('/compress', async (req, res) => {
